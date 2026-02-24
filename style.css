@@ -1,24 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #ffffff;
-    color: #000000;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #f0f2f5;
+  color: #333;
+  text-align: center;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 50px;
+  background: #007bff;
+  color: white;
+  padding: 60px 20px;
 }
 
-h1 {
-    font-size: 32px;
+.headshot {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 20px;
 }
 
-h2 {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
 }
 
-.project {
-    margin-bottom: 20px;
+header p {
+  font-size: 1.2em;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background: white;
+  color: #007bff;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+  color: white;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  padding: 20px;
 }
