@@ -1,0 +1,5 @@
+.DS_Store
+*.npy
+*.npz
+*.pkl
+s3_uploads.py

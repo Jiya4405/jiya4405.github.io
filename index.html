@@ -1,92 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jiya Chaudhari — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiya Chaudhari — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<header class="navbar">
-  <div class="logo">Jiya Chaudhari</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#projects">Featured Projects</a>
-    <a href="#contact">Connect</a>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">JC</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
   </nav>
-</header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <img src="headshot.jpg" alt="Jiya Chaudhari" class="hero-img">
-  <h1>Hi There!</h1>
-  <p class="subtitle">Recruitment Status: Currently open to new opportunities.</p>
-  <div class="social-bubbles">
-    <a href="https://www.linkedin.com/in/jiyachaudhari/" target="_blank" class="bubble linkedin">LinkedIn</a>
-    <a href="https://github.com/Jiya4405" target="_blank" class="bubble github">GitHub</a>
-    <a href="mailto:jiyachaudhary0404@gmail.com" class="bubble email">Email</a>
-  </div>
-</section>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Jiya Chaudhari</h1>
+      <p class="hero-tagline">CS Student &nbsp;&middot;&nbsp; Data Analytics &nbsp;&middot;&nbsp; Product Strategy</p>
+      <p class="hero-bio">
+        I build data-driven products and translate complex technical analysis into clear business insights.
+        Passionate about the intersection of technology, product thinking, and real-world impact.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-decoration" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+  </section>
 
-<!-- ABOUT ME -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>I'm a data analyst based in New York City with a background in computer science and psychology. I graduated from the University at Buffalo with a B.Sc. in Computer Science and a B.A. in Psychology in 2024. My studies and projects have equipped me with a strong foundation in data analysis, visualization, web development, and user behavior research, allowing me to bridge the gap between data, technology, and people.</p>
-  <h3>What I'm Looking For</h3>
-  <p>I’m actively seeking opportunities in data analytics or product management where I can apply my technical and analytical skills to drive business decisions and improve user experiences. I’m excited to collaborate with cross-functional teams, contribute to product strategy, and use data storytelling to shape products that are both meaningful and impactful.</p>
-  
-  <div class="skills-section">
-    <h3>Languages</h3>
-    <p>Python, C, Scala, PHP, Go, JavaScript, TypeScript, JSON, CSS, HTML, OCaml, MIPS Assembly, Shell</p>
-    <h3>Frameworks</h3>
-    <p>Flask, TensorFlow, React, Next.js, Node.js, Unreal Engine 5</p>
-    <h3>Databases</h3>
-    <p>MongoDB, SQL, Supabase, Firebase, MySQL</p>
-    <h3>Tools</h3>
-    <p>Docker, GitHub, Git, VS Code, GraphQL, Trello, Tableau</p>
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Computer Science undergraduate with a focus on data analytics, enterprise technology, and product strategy.
+            I enjoy building tools that make data accessible and decisions smarter.
+          </p>
+          <p>
+            From deploying NLP-powered web apps to engineering cloud infrastructure on AWS, I work across the full stack —
+            from raw data to deployed product. I'm most energized when technical work creates tangible business value.
+          </p>
+          <p>
+            Outside of code, I'm drawn to fintech, consumer apps, and the intersection of product management with data science.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Deployed Apps</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">AWS</span>
+            <span class="stat-label">Cloud Focus</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">NLP</span>
+            <span class="stat-label">ML &amp; AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Featured Projects</h2>
-  <div class="project-card">
-    <h3>The Safety Net Project</h3>
-    <p>TypeScript, JavaScript, React</p>
-    <p>A non-profit website dedicated to providing support and safety for children around the world.</p>
-  </div>
-  <div class="project-card">
-    <h3>GeoSearch</h3>
-    <p>JavaScript, React, Python</p>
-    <p>Internship project: a multi-brand store-locator that lets users search and filter by store type/address, created for leadership to quickly identify optimal purchase locations.</p>
-  </div>
-  <div class="project-card">
-    <h3>Who’s Winning the Music Streaming Battle?</h3>
-    <p>Tableau</p>
-    <p>A Tableau dashboard comparing premium adoption, conversion, engagement, and audience mix across major streaming platforms.</p>
-  </div>
-</section>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Dart / Flutter</span>
+            <span class="tag">SQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML / CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Data &amp; ML</h3>
+          <div class="skill-tags">
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">sentence-transformers</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Cloud &amp; Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="tag">AWS EC2</span>
+            <span class="tag">Auto Scaling Groups</span>
+            <span class="tag">NLB</span>
+            <span class="tag">S3</span>
+            <span class="tag">boto3</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Tools &amp; Practices</h3>
+          <div class="skill-tags">
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Web Scraping</span>
+            <span class="tag">Product Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Keep In Touch!</h2>
-  <p>Let’s connect—I’m always open to new conversations and opportunities.</p>
-  <div class="contact-buttons">
-    <a href="https://www.linkedin.com/in/jiyachaudhari/" target="_blank" class="btn">LinkedIn</a>
-    <a href="mailto:jiyachaudhary0404@gmail.com" class="btn">Email</a>
-    <a href="https://github.com/Jiya4405" target="_blank" class="btn">GitHub</a>
-  </div>
-</section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
 
-<!-- FOOTER -->
-<footer class="footer">
-  <p>Designed and Developed by Jiya Chaudhari</p>
-  <p>© 2026 Jiya Chaudhari</p>
-</footer>
+        <div class="project-card featured">
+          <div class="project-header">
+            <span class="project-badge badge-live">Live</span>
+            <div class="project-links">
+              <a href="https://jiya-resume-matcher.streamlit.app" target="_blank" rel="noopener" class="icon-link" title="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+              <a href="https://github.com/Jiya4405/resume-matcher" target="_blank" rel="noopener" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Resume&ndash;Job Matching AI</h3>
+          <p class="project-desc">
+            NLP-powered tool that scores how well a resume matches a job description using 384-dimensional semantic embeddings.
+            Surfaces matched, missing, and bonus skills with personalised improvement tips.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">sentence-transformers</span>
+            <span class="tech-tag">scikit-learn</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+        </div>
 
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge badge-mobile">Mobile</span>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">Jivan &mdash; Two-Sided Marketplace App</h3>
+          <p class="project-desc">
+            Full-stack Flutter mobile platform with a consumer app and a provider app.
+            Supports demand tracking, order management, and KPI monitoring dashboards.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">SQLite</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge badge-finance">Finance</span>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">Amazon Stock vs Federal Funds Rate</h3>
+          <p class="project-desc">
+            Analysed long-term financial data to evaluate how macroeconomic policy (Fed rate changes)
+            correlates with equity market performance using time-series analysis.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Matplotlib</span>
+            <span class="tech-tag">NumPy</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge badge-scraping">Scraping</span>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">IMDb Top 250 Scraper</h3>
+          <p class="project-desc">
+            Web scraper that extracts structured data from IMDb's Top 250 films &mdash;
+            titles, ratings, genres, and metadata &mdash; and exports to CSV for downstream analysis.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">BeautifulSoup</span>
+            <span class="tech-tag">Requests</span>
+            <span class="tech-tag">CSV</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge badge-cloud">Cloud</span>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">AWS Auto-Scaling Infrastructure</h3>
+          <p class="project-desc">
+            Designed and automated a resilient AWS architecture with EC2 Auto Scaling Groups,
+            Network Load Balancers, and self-healing EC2 recovery scripts using boto3.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">AWS EC2</span>
+            <span class="tech-tag">Auto Scaling</span>
+            <span class="tech-tag">NLB</span>
+            <span class="tech-tag">boto3</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge badge-backend">Backend</span>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">Jivan Tea &mdash; REST API Backend</h3>
+          <p class="project-desc">
+            Python REST API backend for a tea e-commerce platform. Handles product catalogue,
+            orders, and inventory management with a clean endpoint design.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">REST API</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-sub">
+        I'm open to internship opportunities, research collaborations, and interesting projects. Say hi!
+      </p>
+      <div class="contact-links">
+        <a href="mailto:j.chaudhari0404@gmail.com" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>j.chaudhari0404@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jiyachaudhari/" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>linkedin.com/in/jiyachaudhari</span>
+        </a>
+        <a href="https://github.com/Jiya4405" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>github.com/Jiya4405</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; built by Jiya Chaudhari &nbsp;&middot;&nbsp; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
