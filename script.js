@@ -1,9 +1,9 @@
-// Nav: shrink on scroll
+// Nav: subtle darken on scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.style.background = window.scrollY > 40
-    ? 'rgba(13,13,20,0.97)'
-    : 'rgba(13,13,20,0.85)';
+    ? 'rgba(16,17,31,0.92)'
+    : 'rgba(16,17,31,0.72)';
 });
 
 // Nav: mobile toggle
@@ -27,22 +27,27 @@ const observer = new IntersectionObserver(
   { threshold: 0.12 }
 );
 
-document.querySelectorAll('.project-card, .skill-group, .stat-card, .contact-card')
-  .forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
-  });
+const fadeTargets = document.querySelectorAll(
+  '.project-card, .skill-group, .stat-card, .contact-card, .timeline-card, .about-text, .edu-card'
+);
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.project-card, .skill-group, .stat-card, .contact-card')
-    .forEach((el, i) => {
-      el.style.transitionDelay = `${(i % 4) * 80}ms`;
-    });
+fadeTargets.forEach((el, i) => {
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  el.style.transitionDelay = `${(i % 4) * 80}ms`;
+  observer.observe(el);
 });
 
-// Add .visible class via CSS
-const style = document.createElement('style');
-style.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
-document.head.appendChild(style);
+// Cursor-reactive glow: track pointer position within each glass card
+const glowTargets = document.querySelectorAll(
+  '.project-card, .skill-group, .stat-card, .contact-card, .timeline-card, .about-text, .edu-card, .glass'
+);
+
+glowTargets.forEach(el => {
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    el.style.setProperty('--mx', `${x}%`);
+    el.style.setProperty('--my', `${y}%`);
+  });
+});
