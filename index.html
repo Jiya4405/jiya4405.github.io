@@ -274,10 +274,18 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
+      <div class="projects-header">
+        <h2 class="section-title">Projects</h2>
+        <button id="view-toggle" class="view-toggle-btn">View all projects &rarr;</button>
+      </div>
+      <div class="carousel-nav" id="carousel-nav">
+        <button id="prev-project" class="carousel-btn" aria-label="Previous project">&larr; Previous</button>
+        <span id="carousel-counter" class="carousel-counter">1 / 7</span>
+        <button id="next-project" class="carousel-btn" aria-label="Next project">Next &rarr;</button>
+      </div>
+      <div class="projects-grid carousel-mode" id="projects-grid">
 
-        <div class="project-card featured">
+        <div class="project-card featured active">
           <div class="project-header">
             <span class="project-badge badge-live">Live</span>
             <div class="project-links">

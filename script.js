@@ -66,3 +66,53 @@ glowTargets.forEach(el => {
     el.style.setProperty('--my', `${y}%`);
   });
 });
+
+// Projects: carousel navigation + view-all toggle
+const projectsGrid = document.getElementById('projects-grid');
+const carouselNav = document.getElementById('carousel-nav');
+const viewToggle = document.getElementById('view-toggle');
+const prevBtn = document.getElementById('prev-project');
+const nextBtn = document.getElementById('next-project');
+const counterEl = document.getElementById('carousel-counter');
+
+if (projectsGrid) {
+  const cards = Array.from(projectsGrid.querySelectorAll('.project-card'));
+  let activeIndex = cards.findIndex(c => c.classList.contains('active'));
+  if (activeIndex === -1) activeIndex = 0;
+  let gridView = false;
+
+  const showCard = (index) => {
+    cards.forEach((card, i) => {
+      card.classList.toggle('active', i === index);
+      if (i === index) card.classList.add('visible'); // ensure it's not stuck at opacity:0
+    });
+    counterEl.textContent = `${index + 1} / ${cards.length}`;
+  };
+
+  showCard(activeIndex);
+
+  prevBtn.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+    showCard(activeIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % cards.length;
+    showCard(activeIndex);
+  });
+
+  viewToggle.addEventListener('click', () => {
+    gridView = !gridView;
+    if (gridView) {
+      projectsGrid.classList.remove('carousel-mode');
+      carouselNav.classList.add('nav-hidden');
+      viewToggle.textContent = 'View carousel ←';
+      cards.forEach(card => card.classList.add('visible'));
+    } else {
+      projectsGrid.classList.add('carousel-mode');
+      carouselNav.classList.remove('nav-hidden');
+      viewToggle.textContent = 'View all projects →';
+      showCard(activeIndex);
+    }
+  });
+}
