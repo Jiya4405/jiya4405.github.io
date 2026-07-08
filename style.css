@@ -239,7 +239,8 @@ section { position: relative; z-index: 1; padding: 7rem 0; }
   display: block;
   padding: 0.55rem 1rem;
   border-radius: var(--radius-pill);
-  font-size: 0.88rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
   font-weight: 500;
   color: var(--ink-dim);
   transition: color 0.25s ease, background 0.25s ease;
@@ -305,6 +306,17 @@ section { position: relative; z-index: 1; padding: 7rem 0; }
   color: var(--teal);
   margin: 0 0 0.6rem;
   letter-spacing: 0.04em;
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--teal);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero-name {

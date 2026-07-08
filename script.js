@@ -1,3 +1,18 @@
+// Hero: typewriter intro
+const typeEl = document.getElementById('typewriter');
+if (typeEl) {
+  const message = 'hi, jiya here.';
+  let i = 0;
+  const type = () => {
+    if (i <= message.length) {
+      typeEl.textContent = message.slice(0, i);
+      i++;
+      setTimeout(type, 55);
+    }
+  };
+  type();
+}
+
 // Nav: subtle darken on scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
